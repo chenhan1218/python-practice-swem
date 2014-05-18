@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os
@@ -65,7 +65,7 @@ def getOnlineUserNumber():
         chan.close()
         t.close()
 
-        screen = screen.decode('big5')
+        screen = screen.decode('big5','replace')
 
         # remove colar code
 
@@ -91,3 +91,5 @@ def getOnlineUserNumber():
             pass
         sys.exit(1)
 
+if __name__ == '__main__':
+    print getOnlineUserNumber()
